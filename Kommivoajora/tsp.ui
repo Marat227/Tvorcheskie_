@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TSP</class>
+ <widget class="QMainWindow" name="TSP">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>909</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TSP</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(238, 245, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>501</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </widget>
+   <widget class="QPushButton" name="Create_vertex">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>530</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(224, 231, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Добавить вершину</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Delete_vertex">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>570</y>
+      <width>321</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(224, 231, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Удалить вершину</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Create_edge">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>570</y>
+      <width>481</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(224, 231, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Добавить ребро</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ScreenDeleteVertex">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>570</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(97, 97, 97);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabelEdge1">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>530</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Первая вершина</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ScreenEdge1">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>530</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(97, 97, 97);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabelWeight">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>530</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Вес</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ScreenWeight">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>530</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(97, 97, 97);</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabelEdge2">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>530</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Вторая вершина</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ScreenEdge2">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>530</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(97, 97, 97);</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Route_result">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>20</y>
+      <width>371</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(40, 255, 7);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Length_route">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>50</y>
+      <width>371</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>100</y>
+      <width>371</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="Optimal_rout">
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(224, 231, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Рассчитать оптимальный путь</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Clear_graph">
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(224, 231, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Очистить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
