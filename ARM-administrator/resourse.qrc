@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/AddS.png</file>
+        <file>img/addT.png</file>
+        <file>img/clearAll.png</file>
+        <file>img/Delete.png</file>
+        <file>img/DeleteS.png</file>
+        <file>img/save.png</file>
+        <file>img/setup.png</file>
+        <file>img/Sort.png</file>
+        <file>img/upgrade.png</file>
+        <file>img/upgradeS2.png</file>
+        <file>img/person.png</file>
+        <file>img/Tovar.png</file>
+    </qresource>
+</RCC>
